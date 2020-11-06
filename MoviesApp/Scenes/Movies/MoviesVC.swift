@@ -18,6 +18,7 @@ class MoviesVC: UIViewController {
     
     // MARK: Constants
     let movieCell = "MovieCell"
+    let movieDetailsVC = "MovieDetailsVC"
     
     override func viewDidLoad() {
         super.viewDidLoad()

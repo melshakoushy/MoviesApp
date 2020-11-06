@@ -13,6 +13,7 @@ protocol MoviesView: class {
     func hideIndicator()
     func fetchingDataSuccess()
     func showError(error: String)
+    func navigateToMovieDetailsVC(movie: Results)
 }
 
 protocol MovieCellView {
@@ -51,7 +52,7 @@ class MoviesVCPresenter {
         }
     }
     
-    func getUsersCount() -> Int {
+    func getMoviesCount() -> Int {
         return movies.count
     }
     
@@ -61,6 +62,11 @@ class MoviesVCPresenter {
         cell.displayReleaseData(date: movie.release_date ?? "" )
         cell.displayVoteAverage(voteAverage: "\(String(describing: movie.vote_average ?? 0))")
         cell.displayImg(imgUrl: IMG_BASE_URL + (movie.poster_path ?? ""))
+    }
+    
+    func didSelectRow(index: Int) {
+        let movie = movies[index]
+        view?.navigateToMovieDetailsVC(movie: movie)
     }
     
 }

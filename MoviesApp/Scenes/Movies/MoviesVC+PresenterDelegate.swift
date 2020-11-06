@@ -10,6 +10,7 @@ import Foundation
 import SKActivityIndicatorView
 
 extension MoviesVC: MoviesView {
+    
     func showIndicator() {
 //        SKActivityIndicator.show()
     }
@@ -24,5 +25,12 @@ extension MoviesVC: MoviesView {
     
     func showError(error: String) {
         print(error)
+    }
+    
+    func navigateToMovieDetailsVC(movie: Results) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: movieDetailsVC) as! MovieDetailsVC
+        vc.movie = movie
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
