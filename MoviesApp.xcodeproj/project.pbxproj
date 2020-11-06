@@ -101,14 +101,11 @@
 		0B573B13255550BD00700A36 /* MoviesApp */ = {
 			isa = PBXGroup;
 			children = (
-				0B573B14255550BD00700A36 /* AppDelegate.swift */,
-				0B573B16255550BD00700A36 /* SceneDelegate.swift */,
-				0B573B18255550BD00700A36 /* FirstViewController.swift */,
-				0B573B1A255550BD00700A36 /* SecondViewController.swift */,
-				0B573B1C255550BD00700A36 /* Main.storyboard */,
-				0B573B1F255550BF00700A36 /* Assets.xcassets */,
-				0B573B21255550BF00700A36 /* LaunchScreen.storyboard */,
-				0B573B24255550BF00700A36 /* Info.plist */,
+				0B573B47255550F600700A36 /* Configurations */,
+				0B573B46255550E100700A36 /* Core */,
+				0B573B482555510800700A36 /* Resources */,
+				0B573B492555511200700A36 /* StoryBoards */,
+				0B573B4A2555512300700A36 /* Scenes */,
 			);
 			path = MoviesApp;
 			sourceTree = "<group>";
@@ -129,6 +126,49 @@
 				0B573B3A255550BF00700A36 /* Info.plist */,
 			);
 			path = MoviesAppUITests;
+			sourceTree = "<group>";
+		};
+		0B573B46255550E100700A36 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0B573B14255550BD00700A36 /* AppDelegate.swift */,
+				0B573B16255550BD00700A36 /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		0B573B47255550F600700A36 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				0B573B24255550BF00700A36 /* Info.plist */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		0B573B482555510800700A36 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0B573B1F255550BF00700A36 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0B573B492555511200700A36 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				0B573B1C255550BD00700A36 /* Main.storyboard */,
+				0B573B21255550BF00700A36 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		0B573B4A2555512300700A36 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0B573B18255550BD00700A36 /* FirstViewController.swift */,
+				0B573B1A255550BD00700A36 /* SecondViewController.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,7 +480,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 45S7VN2TT3;
-				INFOPLIST_FILE = MoviesApp/Info.plist;
+				INFOPLIST_FILE = MoviesApp/Configurations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,7 +498,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 45S7VN2TT3;
-				INFOPLIST_FILE = MoviesApp/Info.plist;
+				INFOPLIST_FILE = MoviesApp/Configurations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
