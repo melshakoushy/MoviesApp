@@ -27,6 +27,9 @@ extension MoviesVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: movieCell, for: indexPath) as! MovieCell
         presenter.configure(cell: cell, for: indexPath.row)
+        cell.favoritePressed = {
+            self.presenter.favoritePressed(index: indexPath.row)
+        }
         return cell
     }
     

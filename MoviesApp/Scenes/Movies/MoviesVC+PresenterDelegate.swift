@@ -12,11 +12,15 @@ import SKActivityIndicatorView
 extension MoviesVC: MoviesView {
     
     func showIndicator() {
-//        SKActivityIndicator.show()
+        DispatchQueue.main.async {
+            SKActivityIndicator.show()
+        }
     }
     
     func hideIndicator() {
-//        SKActivityIndicator.dismiss()
+        DispatchQueue.main.async {
+            SKActivityIndicator.dismiss()
+        }
     }
     
     func fetchingDataSuccess() {

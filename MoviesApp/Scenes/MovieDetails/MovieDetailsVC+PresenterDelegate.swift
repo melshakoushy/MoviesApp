@@ -33,11 +33,11 @@ extension MovieDetailsVC: MovieDetailsView {
     }
     
     func showIndicator() {
-        //        SKActivityIndicator.show()
+        SKActivityIndicator.show()
     }
     
     func hideIndicator() {
-        //        SKActivityIndicator.dismiss()
+        SKActivityIndicator.dismiss()
     }
     
     func fetchingDataSuccess() {

@@ -34,10 +34,10 @@ class MoviesVCPresenter {
     }
     
     func viewDidLoad() {
-        getUsers()
+        getMovies()
     }
     
-    func getUsers() {
+    func getMovies() {
         view?.showIndicator()
         interactor.getMovies { [weak self] (movies, error) in
             guard let self = self else { return }
@@ -69,4 +69,10 @@ class MoviesVCPresenter {
         view?.navigateToMovieDetailsVC(movie: movie)
     }
     
+    func favoritePressed(index: Int) {
+        view?.showIndicator()
+        let movie = movies[index]
+        interactor.addFavoritesToRealm(movie: movie)
+        view?.hideIndicator()
+    }
 }

@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
+import RealmSwift
 
 class MoviesInteractor {
     
@@ -24,5 +25,21 @@ class MoviesInteractor {
                 completionHandler(nil, error)
             }
         })
+    }
+    
+    
+    let realm = try! Realm()
+    
+    func addFavoritesToRealm(movie: Results) {
+        let favMovie = FavoriteMovie()
+        favMovie.id = movie.id ?? 0
+        favMovie.title = movie.title ?? ""
+        favMovie.overview = movie.overview ?? ""
+        favMovie.poster_path = movie.poster_path ?? ""
+        favMovie.release_date = movie.release_date ?? ""
+        favMovie.vote_average = movie.vote_average ?? 0
+        realm.beginWrite()
+        realm.add(favMovie)
+        try! realm.commitWrite()
     }
 }

@@ -7,11 +7,12 @@ target 'MoviesApp' do
 
   # Pods for MoviesApp
 pod 'ObjectMapper'
-pod 'Alamofire'
+pod 'Alamofire', '~> 5.0.0-rc.2'
 pod 'SwiftyJSON'
 pod 'SKActivityIndicatorView'
 pod 'AlamofireObjectMapper'
 pod 'Kingfisher'
+pod 'RealmSwift'
 
   target 'MoviesAppTests' do
     inherit! :search_paths

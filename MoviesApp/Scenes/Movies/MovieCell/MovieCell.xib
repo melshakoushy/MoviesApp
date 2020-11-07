@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="157" id="KGk-i7-Jjw" customClass="MovieCell" customModule="MoviesApp" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="157" id="KGk-i7-Jjw" customClass="MovieCell" customModule="MoviesApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="157"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -62,15 +62,43 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmV-uO-zFz">
+                                <rect key="frame" x="160" y="97" width="136" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Add to favorites">
+                                    <color key="titleColor" red="0.89274001120000002" green="0.67973828319999996" blue="0.050211288030000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius1">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor1">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity1">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius1">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="favoriteBtnPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="eom-Gv-cdn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.89274001120000002" green="0.67973828319999996" blue="0.050211288030000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Yo1-gq-eqk" firstAttribute="top" secondItem="S9L-zr-guB" secondAttribute="top" constant="16" id="4pt-u6-nfy"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Yo1-gq-eqk" secondAttribute="bottom" constant="16" id="CTz-Ky-w3r"/>
+                            <constraint firstAttribute="bottom" secondItem="YmV-uO-zFz" secondAttribute="bottom" constant="8" id="FSe-Wm-13W"/>
                             <constraint firstItem="KrN-c8-0E7" firstAttribute="leading" secondItem="S9L-zr-guB" secondAttribute="leading" id="O2y-n6-IsV"/>
                             <constraint firstAttribute="trailing" secondItem="Yo1-gq-eqk" secondAttribute="trailing" constant="8" id="Og4-HJ-8nV"/>
                             <constraint firstItem="KrN-c8-0E7" firstAttribute="top" secondItem="S9L-zr-guB" secondAttribute="top" id="Vrh-66-UPP"/>
+                            <constraint firstItem="YmV-uO-zFz" firstAttribute="leading" secondItem="KrN-c8-0E7" secondAttribute="trailing" constant="8" id="XUt-vp-IRr"/>
                             <constraint firstItem="KrN-c8-0E7" firstAttribute="width" secondItem="S9L-zr-guB" secondAttribute="width" multiplier="1:2" id="ZVH-gf-Cc5"/>
+                            <constraint firstAttribute="trailing" secondItem="YmV-uO-zFz" secondAttribute="trailing" constant="8" id="pzH-6e-zP2"/>
                             <constraint firstItem="Yo1-gq-eqk" firstAttribute="leading" secondItem="KrN-c8-0E7" secondAttribute="trailing" constant="16" id="r2L-Mk-MtA"/>
                             <constraint firstAttribute="bottom" secondItem="KrN-c8-0E7" secondAttribute="bottom" id="v1J-6w-3G0"/>
                         </constraints>
@@ -101,6 +129,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="favBtn" destination="YmV-uO-zFz" id="vwq-3s-CRQ"/>
                 <outlet property="mainView" destination="S9L-zr-guB" id="fPk-VI-YiW"/>
                 <outlet property="movieDateLbl" destination="cRF-nT-s4c" id="ARk-87-mDv"/>
                 <outlet property="movieImg" destination="KrN-c8-0E7" id="Vur-Gq-u2b"/>

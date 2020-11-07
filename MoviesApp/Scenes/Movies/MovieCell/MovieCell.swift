@@ -16,10 +16,13 @@ class MovieCell: UITableViewCell, MovieCellView {
     @IBOutlet weak var movieTitleLbl: UILabel!
     @IBOutlet weak var movieDateLbl: UILabel!
     @IBOutlet weak var movieRateLbl: UILabel!
+    @IBOutlet weak var favBtn: UIButton!
+    
+    // MARK: Variables
+    var favoritePressed: (() -> Void)? = nil
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        selectionStyle = .none
     }
     
     func displayTitle(title: String) {
@@ -37,4 +40,9 @@ class MovieCell: UITableViewCell, MovieCellView {
     func displayImg(imgUrl: String) {
         movieImg.loadImage_kf(imageUrl: imgUrl)
     }
+    
+    @IBAction func favoriteBtnPressed(_ sender: Any) {
+        favoritePressed?()
+    }
+    
 }

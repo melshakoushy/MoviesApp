@@ -9,12 +9,25 @@
 import UIKit
 
 class FavoritesVC: UIViewController {
+    
+    //MARK: Outlets
+    @IBOutlet weak var favoritesTableView: UITableView!
 
+    // MARK: Variables
+    var presenter: FavoritesVCPresenter!
+    
+    // MARK: Constants
+    let movieCell = "MovieCell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
-
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupTableView()
+        presenter = FavoritesVCPresenter(view: self)
+        presenter.viewDidLoad()
+    }
 }
 

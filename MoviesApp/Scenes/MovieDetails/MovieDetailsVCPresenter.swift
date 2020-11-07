@@ -66,7 +66,9 @@ class MovieDetailsVCPresenter {
     }
     
     func vote(rate: Int) {
+        view?.showIndicator()
         interactor.rateMovie(movieId: movie.id ?? 0, rating: rate)
+        view?.hideIndicator()
     }
     
     func configure(cell: SimilarMovieCellView, for index: Int) {
