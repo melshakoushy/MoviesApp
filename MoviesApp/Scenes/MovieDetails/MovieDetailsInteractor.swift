@@ -22,7 +22,7 @@ class MovieDetailsInteractor {
             "Content-Type" : "application/json;charset=utf-8"
         ]
         
-        let rateUrl = "https://api.themoviedb.org/3/movie/\(movieId)/rating?api_key=c15dfe5ebee8f16a1d43615304757850&guest_session_id=ca6cade5853808afe18540c697933132"
+        let rateUrl = "https://api.themoviedb.org/3/movie/\(movieId)/rating?api_key=c15dfe5ebee8f16a1d43615304757850&guest_session_id=c0ca249f2023b43a2c70fd565dbcc881"
         print(rateUrl)
         
         AF.request(rateUrl, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: HEADER).responseJSON { (response) in

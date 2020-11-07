@@ -8,6 +8,7 @@
 
 import Foundation
 import SKActivityIndicatorView
+import Message
 
 extension MoviesVC: MoviesView {
     
@@ -36,5 +37,11 @@ extension MoviesVC: MoviesView {
         let vc = storyboard.instantiateViewController(withIdentifier: movieDetailsVC) as! MovieDetailsVC
         vc.movie = movie
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func showAlert(Message: String) {
+        DispatchQueue.main.async {
+            Alert(withMessage: Message).show(andCloseAfter: 2.0)
+        }
     }
 }

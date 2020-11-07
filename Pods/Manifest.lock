@@ -6,6 +6,7 @@ PODS:
   - Kingfisher (5.15.7):
     - Kingfisher/Core (= 5.15.7)
   - Kingfisher/Core (5.15.7)
+  - Message (1.0.6)
   - ObjectMapper (3.5.3)
   - Realm (10.1.1):
     - Realm/Headers (= 10.1.1)
@@ -13,38 +14,37 @@ PODS:
   - RealmSwift (10.1.1):
     - Realm (= 10.1.1)
   - SKActivityIndicatorView (1.0.0)
-  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-rc.2)
   - AlamofireObjectMapper
   - Kingfisher
+  - Message
   - ObjectMapper
   - RealmSwift
   - SKActivityIndicatorView
-  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireObjectMapper
     - Kingfisher
+    - Message
     - ObjectMapper
     - Realm
     - RealmSwift
     - SKActivityIndicatorView
-    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: f9450d3c7f6bea2ad62e7a541c3e9b186c7991d6
   AlamofireObjectMapper: 74d1440c92c42bbcc2b5f4dc81654ac095ec669f
   Kingfisher: 6e1a13523fcb1c86924ce53affe4ac957e544d59
+  Message: 6649528e7385284f7e46ed05ce27ee0d792562e1
   ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
   Realm: 784ca1da1453e31a9c9adc14445421a81f316119
   RealmSwift: cc52fe0dcea56387274dff36e19219e055a3bb84
   SKActivityIndicatorView: 81c123380127ad497f9b57cd4d11347e40ab3427
-  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 4b1f9b9ce270922236c7004037d208fa21211e16
+PODFILE CHECKSUM: ec46fa3afc7fda852613d0fb2c7f2225bb78373e
 
 COCOAPODS: 1.10.0

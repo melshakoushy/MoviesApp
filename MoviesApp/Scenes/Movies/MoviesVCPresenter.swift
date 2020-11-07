@@ -14,6 +14,7 @@ protocol MoviesView: class {
     func fetchingDataSuccess()
     func showError(error: String)
     func navigateToMovieDetailsVC(movie: Results)
+    func showAlert(Message: String)
 }
 
 protocol MovieCellView {
@@ -70,9 +71,10 @@ class MoviesVCPresenter {
     }
     
     func favoritePressed(index: Int) {
-        view?.showIndicator()
+//        view?.showIndicator()
         let movie = movies[index]
         interactor.addFavoritesToRealm(movie: movie)
-        view?.hideIndicator()
+        view?.showAlert(Message: "You have added the movie to your favorites")
+//        view?.hideIndicator()
     }
 }

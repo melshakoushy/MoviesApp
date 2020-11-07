@@ -19,6 +19,7 @@ protocol MovieDetailsView: class {
     func fetchingDataSuccess()
     func showError(error: String)
     func navigateToMovieDetailsVC(movie: Results)
+    func showAlert(Message: String)
 }
 
 protocol SimilarMovieCellView {
@@ -66,9 +67,10 @@ class MovieDetailsVCPresenter {
     }
     
     func vote(rate: Int) {
-        view?.showIndicator()
+//        view?.showIndicator()
         interactor.rateMovie(movieId: movie.id ?? 0, rating: rate)
-        view?.hideIndicator()
+        view?.showAlert(Message: "Your vote sent successfully")
+//        view?.hideIndicator()
     }
     
     func configure(cell: SimilarMovieCellView, for index: Int) {

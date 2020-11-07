@@ -8,6 +8,7 @@
 
 import Foundation
 import SKActivityIndicatorView
+import Message
 
 extension MovieDetailsVC: MovieDetailsView {
     
@@ -33,11 +34,15 @@ extension MovieDetailsVC: MovieDetailsView {
     }
     
     func showIndicator() {
-        SKActivityIndicator.show()
+        DispatchQueue.main.async {
+            SKActivityIndicator.show()
+        }
     }
     
     func hideIndicator() {
-        SKActivityIndicator.dismiss()
+        DispatchQueue.main.async {
+            SKActivityIndicator.dismiss()
+        }
     }
     
     func fetchingDataSuccess() {
@@ -53,5 +58,11 @@ extension MovieDetailsVC: MovieDetailsView {
         let vc = storyboard.instantiateViewController(withIdentifier: movieDetailsVC) as! MovieDetailsVC
         vc.movie = movie
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func showAlert(Message: String) {
+        DispatchQueue.main.async {
+            Alert(withMessage: Message).show(andCloseAfter: 2.0)
+        }
     }
 }
